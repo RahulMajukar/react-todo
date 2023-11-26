@@ -1,10 +1,27 @@
-*{
+/* Reset styles */
+* {
   margin: 0;
   padding: 0;
 }
 
-.container{
-  background-color: tomato;
+/* Color variables */
+:root {
+  --background-container: #2c3e50; /* Dark blue-gray */
+  --background-app-wrapper: #34495e; /* Dark blue-gray */
+  --text-header: #ecf0f1; /* Light gray */
+  --text-input: #bdc3c7; /* Medium gray */
+  --border-input: #7f8c8d; /* Dark gray */
+  --button-add: #3498db; /* Blue */
+  --button-complete: #2ecc71; /* Green */
+  --button-delete: #e74c3c; /* Red */
+  --text-decoration-complete: #e74c3c; /* Red */
+  --background-list: #2c3e50; /* Dark blue-gray */
+  --text-list: #ecf0f1; /* Light gray */
+}
+
+/* Container styles */
+.container {
+  background-color: var(--background-container);
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -12,8 +29,9 @@
   align-items: center;
 }
 
-.app-wrapper{
-  background-color: #12343b;
+/* App Wrapper styles */
+.app-wrapper {
+  background-color: var(--background-app-wrapper);
   min-width: 450px;
   min-height: 650px;
   padding: 30px;
@@ -23,35 +41,39 @@
   margin-bottom: 10px;
 }
 
-.header h1{
-  color: #fff;
+/* Header styles */
+.header h1 {
+  color: var(--text-header);
   text-align: center;
   margin: 30px 0;
 }
 
+/* Task Input styles */
 .task-input {
   outline: none;
   width: 260px;
   padding: 15px;
   margin-right: 25px;
   font-size: 20px;
-  color: #ccc;
+  color: var(--text-input);
   background-color: #000000;
-  border: 1px solid #c89666;
+  border: 1px solid var(--border-input);
   border-radius: 10px;
 }
 
-.button-add{
+/* Add Button styles */
+.button-add {
   width: 70px;
   padding: 15px 15px;
   font-size: 20px;
   border-radius: 10px;
   border: 0;
-  background-color: #f1af71;
+  background-color: var(--button-add);
   cursor: pointer;
 }
 
-.list-item{
+/* List Item styles */
+.list-item {
   display: flex;
   margin: 20px 0;
   border: 1px solid #ccc;
@@ -60,9 +82,10 @@
   max-height: 30px;
 }
 
+/* Button styles (shared) */
 .button-complete,
 .button-delete,
-.button-edit{
+.button-edit {
   border: none;
   outline: none;
   cursor: pointer;
@@ -70,32 +93,39 @@
   font-size: 28px;
   border-radius: 50%;
 }
-.button-complete{
-  color: #e2d029;
+
+/* Complete Button styles */
+.button-complete {
+  color: var(--button-complete);
   margin-right: 10px;
 }
 
-.button-delete{
-  color: lightseagreen;
+/* Delete Button styles */
+.button-delete {
+  color: var(--button-delete);
 }
 
-.complete{
+/* Completed task styles */
+.complete {
   text-decoration-style: solid;
   text-decoration-line: line-through;
-  text-decoration-color: #ff6c6c;
+  text-decoration-color: var(--text-decoration-complete);
   opacity: 0.6;
 }
-.list{
+
+/* List styles */
+.list {
   width: 220px;
-  background-color: #12343b;
+  background-color: var(--background-list);
   border: none;
-  color: #ccc;
+  color: var(--text-list);
   font-size: 20px;
   padding-left: 10px;
   margin-right: 15px;
 }
 
+/* Focus styles */
 input:focus,
-button:focus{
+button:focus {
   outline: none;
 }

@@ -22,13 +22,12 @@ const ToDoList = ({ todo, setTodo, setEditTodo }) => {
 
     return (
         <div>
-            To-Do-List
             {todo.map((data) => (
                 <li className='list-item' key={data.id}>
                     <input
                         type="text"
                         value={data.title}
-                        className='list'
+                        className={`list ${data.completed ? "complete" : ""}`}
                         onChange={(event) => event.preventDefault()}
                     />
                     <div>

@@ -14,7 +14,7 @@ const Form = ({input,setInput,todo,setTodo,editTodo,setEditTodo}) => {
         setTodo(newTodo);
         setEditTodo("");
     };
-    
+     
 
     // const updateTodo = (title, id, completed) => {
     //     const newTodo = todo.map((todo) =>
@@ -60,7 +60,10 @@ const Form = ({input,setInput,todo,setTodo,editTodo,setEditTodo}) => {
             value={input} required
             onChange={handleChange}
             />
-            <button className='button-add'>Add</button>
+            <button className='button-add'>
+            {/* Add */}
+            {editTodo ? "OK" : "ADD"}
+            </button>
         </form>
     </div>
   )
